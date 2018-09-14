@@ -7,6 +7,6 @@
  (test-dependencies test)
  (author "Ivan Raikov")
  (synopsis "Parsing and formatting of comma-separated values (CSV).")
- (components (extension csv))
+ (components (extension csv-abnf))
  )
 

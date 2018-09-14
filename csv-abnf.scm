@@ -50,7 +50,7 @@
 ;;   <http://www.gnu.org/licenses/>.
 
 
-(module csv
+(module csv-abnf
 
 	(make-parser make-format csv-record?
          list->csv-record csv-record->list

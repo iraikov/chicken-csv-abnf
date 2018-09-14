@@ -1,6 +1,5 @@
-;; input stream based on character list
 
-(import scheme (chicken base) test csv)
+(import scheme (chicken base) test csv-abnf)
 
 (define pcsv (make-parser #\|))
 (define-values (fcell _ fcsv) (make-format #\|))
