@@ -88,8 +88,7 @@
     )
 
 
-(define escaped-dquote
-  (abnf:lit "\"\""))
+(define escaped-dquote (abnf:bind (lambda (x) (list #\")) (abnf:lit "\"\"")))
 
 
 (define textdata

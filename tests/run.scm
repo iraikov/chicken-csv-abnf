@@ -23,4 +23,12 @@
 	     (fcsv `(,(list->csv-record (list "Test 1" "Test 2" "Test 3"))
 		     ,(list->csv-record (list "Test 4" "Test 5" ))))))
 
+(test-group "csv roundtrip"
+            (test '(("foo\"bar") ("o'baz"))
+                  (map csv-record->list (pcsv
+                                         (->char-list (fcsv `(,(list->csv-record (list "foo\"bar"))
+                                                              ,(list->csv-record (list "o'baz" ))))
+                                                      ))
+                       ))
+            )
 (test-exit)
